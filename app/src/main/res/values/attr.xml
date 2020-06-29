@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PersonCompoundView">
+        <attr name="personName" format="string"/>
+        <attr name="personInfo" format="string"/>
+        <attr name="buttonAText" format="string"/>
+        <attr name="buttonBText" format="string"/>
+        <attr name="personPic" format="integer"/>
+    </declare-styleable>
+</resources>
