@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="PersonCompoundView">
+    <declare-styleable name="CompoundView">
         <attr name="personName" format="string"/>
         <attr name="personInfo" format="string"/>
         <attr name="buttonAText" format="string"/>

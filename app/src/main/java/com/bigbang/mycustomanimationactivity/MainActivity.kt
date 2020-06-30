@@ -11,14 +11,6 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        /*val list =  mutableListOf<String>("Hello", "Hello", "Hello", "Hello", "Hello", "Hello", "Hello", "Hello", "Hello", "Hello", "Hello", "Hello", "Hello", "Hello", "Hello", "Hello", "Hello", "Hello", "Hello", "Hello", "Hello", "Hello", "Hello")
-
-        var rvAdapter = RVAdapter(list)*/
-
-/*
-        rview.adapter = rvAdapter
-*/
-
         /*val animation = AnimationUtils.loadAnimation(this, R.anim.slide_in_anim)
         val animation2 = AnimationUtils.loadAnimation(this, R.anim.slide_in_anim_from_left)
         val animation3 = AnimationUtils.loadAnimation(this, R.anim.scale_animation)
