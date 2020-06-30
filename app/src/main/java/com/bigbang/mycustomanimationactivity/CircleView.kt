@@ -19,6 +19,27 @@ class CircleView(context: Context, attributeSet: AttributeSet? = null) :
     // Simulating the solar system
     // Information from http://www.enchantedlearning.com/subjects/astronomy/planets/
 
+    // These control the shape of the orbits - must be set relative to View width & height
+    private val sizeMultiplier by lazy { Math.min(width, height) * 0.0035f}
+
+    private val cX by lazy { width / 2.0f }
+    private val cY by lazy { height / 2.0f }
+
+    private val baseSize by lazy { 50.0f * sizeMultiplier }
+    private val incrX by lazy { 30.0f * sizeMultiplier }
+    private val incrY by lazy { 20.0f * sizeMultiplier }
+
+    //size
+    private val mercurySize by lazy{ 5.0f * sizeMultiplier }
+    private val venusSize by lazy { 10.0f * sizeMultiplier }
+    private val earthSize by lazy { 10.0f * sizeMultiplier }
+    private val marsSize by lazy { 7.0f * sizeMultiplier }
+    private val jupiterSize by lazy { 20.0f * sizeMultiplier }
+    private val saturnSize by lazy { 15.0f * sizeMultiplier }
+    private val uranusSize by lazy { 10.0f * sizeMultiplier }
+    private val neptuneSize by lazy { 10.0f * sizeMultiplier }
+    private val plutoSize by lazy { 5.0f * sizeMultiplier }
+
     //planet colors
     private val colorMercury = Paint().also{ it.color = Color.rgb(219, 217, 212) }
     private val colorVenus = Paint().also{ it.color = Color.rgb(205, 212, 106) }
@@ -48,17 +69,6 @@ class CircleView(context: Context, attributeSet: AttributeSet? = null) :
     private val neptuneSpeed = 1f/164.81f
     private val plutoSpeed = 1f/247.7f
 
-    //size
-    private val mercurySize = 5.0f
-    private val venusSize = 10.0f
-    private val earthSize = 10.0f
-    private val marsSize = 7.0f
-    private val jupiterSize = 20.0f
-    private val saturnSize = 15.0f
-    private val uranusSize = 10.0f
-    private val neptuneSize = 10.0f
-    private val plutoSize = 5.0f
-
     // Orbit
     private val mercuryOrbit = 1.0f
     private val venusOrbit = 2.0f
@@ -70,16 +80,10 @@ class CircleView(context: Context, attributeSet: AttributeSet? = null) :
     private val neptuneOrbit = 8.0f
     private val plutoOrbit = 9.0f
 
-    // These control the shape of the orbits - must be set relative to View width & height
-    private val cX by lazy { width / 2.0f }
-    private val cY by lazy { height / 2.0f }
 
-    private val baseSize = 100.0f
-    private val incrX = 30.0f
-    private val incrY = 20.0f
 
     // model variables
-    var speed = 0.1f
+    var speed = 0.01f
     var currentTime = 0.0f
     var animate = true
 
