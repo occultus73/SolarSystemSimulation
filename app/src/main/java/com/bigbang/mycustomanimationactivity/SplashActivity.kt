@@ -12,10 +12,10 @@ class SplashActivity: AppCompatActivity() {
         val circleView: CircleView = CircleView(this)
         setContentView(circleView)
 
-        Handler().postDelayed({
+        /*Handler().postDelayed({
             startActivity(Intent(this, MainActivity::class.java).also {
                 it.flags = (Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             })
-        }, 3000)
+        }, 3000)*/
     }
 }
